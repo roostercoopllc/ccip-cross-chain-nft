@@ -1,0 +1,19 @@
+{
+  "name": "Balmers Peak Testing NFT",
+  "description": "My favorite comic from xkcd",
+  "image": "https://dweb.link/ipfs/QmVQUzUUaSmigZBwM25E9727RWJufP7Tff7iZFsddQAhrJ",
+  "attributes": [
+    {
+      "trait_type": "This is a test",
+      "value": "Completely a Test"
+    },
+    {
+      "trait_type": "Worth",
+      "value": "0 dollars"
+    },
+    {
+      "trait_type": "Original",
+      "value": "https://xkcd.com/323/"
+    }
+  ]
+}

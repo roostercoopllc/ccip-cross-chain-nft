@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.19;
+pragma solidity 0.8.21;
 
-import {CCIPReceiver} from "@chainlink/contracts-ccip/src/v0.8/ccip/applications/CCIPReceiver.sol";
+
 import {Client} from "@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol";
-import {MyNFT} from "./MyNFT.sol";
+import {XkcdNFT} from "./MyNFT.sol";
+import {CCIPReceiver} from "@chainlink/contracts-ccip/src/v0.8/ccip/applications/CCIPReceiver.sol";
 
 /**
  * THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY.
@@ -11,12 +12,12 @@ import {MyNFT} from "./MyNFT.sol";
  * DO NOT USE THIS CODE IN PRODUCTION.
  */
 contract DestinationMinter is CCIPReceiver {
-    MyNFT nft;
+    XkcdNFT nft;
 
     event MintCallSuccessfull();
 
     constructor(address router, address nftAddress) CCIPReceiver(router) {
-        nft = MyNFT(nftAddress);
+        nft = XkcdNFT(nftAddress);
     }
 
     function _ccipReceive(

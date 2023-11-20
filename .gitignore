@@ -7,3 +7,7 @@ coverage.json
 cache
 /artifacts
 
+# Remix Files
+.deps/
+build/
+contracts/artifacts/
