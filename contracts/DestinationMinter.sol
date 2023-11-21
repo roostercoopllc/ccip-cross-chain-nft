@@ -3,7 +3,7 @@ pragma solidity 0.8.21;
 
 
 import {Client} from "@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol";
-import {XkcdNFT} from "./MyNFT.sol";
+import {CcipNFT} from "./MyNFT.sol";
 import {CCIPReceiver} from "@chainlink/contracts-ccip/src/v0.8/ccip/applications/CCIPReceiver.sol";
 
 /**
@@ -12,12 +12,12 @@ import {CCIPReceiver} from "@chainlink/contracts-ccip/src/v0.8/ccip/applications
  * DO NOT USE THIS CODE IN PRODUCTION.
  */
 contract DestinationMinter is CCIPReceiver {
-    XkcdNFT nft;
+    CcipNFT nft;
 
     event MintCallSuccessfull();
 
     constructor(address router, address nftAddress) CCIPReceiver(router) {
-        nft = XkcdNFT(nftAddress);
+        nft = CcipNFT(nftAddress);
     }
 
     function _ccipReceive(
